@@ -1,0 +1,29 @@
+Cómo Usar el Sistema de Misiones RPG con FastAPI?
+
+Configuración Inicial.
+
+1.- Inicia el servidor (copia y pega en el terminal ya iniciado): 
+uvicorn app.main:app --reload
+
+2.- Ya iniciado el servidor abre la interfaz Swagger (copia y pega en el navegador):
+http://localhost:8000/docs
+
+Paso 1:
+Crea tu personaje.
+
+Endpoint: POST /personajes
+ 
+ejemplo:
+{
+  "name": "xXSpartanXx69",
+  "xp": 0,
+  "level": 1
+}
+
+Respuesta exitosa despues del cambio (201 Created):
+{
+  "name": "Guerrero Épico",
+  "xp": 0,
+  "level": 1,
+  "id": 1
+}
